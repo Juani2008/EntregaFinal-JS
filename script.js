@@ -1,7 +1,7 @@
-//usuario datos    
+//usuario datos y registro
 let usuario =  [];
 
-    
+    //swettalert2 registro
 setTimeout(() => {
 
     swal.fire({
@@ -33,7 +33,7 @@ setTimeout(() => {
     })
 },2000)
 
-// productos
+// productos HTML
 const producto = [
     {marca:"Gan",tipo:"3x3",precio:"400", imagen:"<img src=\"images/gan3x3.jfif\" alt=\"\">",id:1},
     {marca:"Dayan",tipo:"2x2",precio:"600",imagen:"<img src=\"images/dayan2x2.jfif\" alt=\"\">",id:2},
@@ -52,14 +52,13 @@ const producto = [
     {marca:"Moyu",tipo:"Fisher",precio:"950",imagen:"<img src=\"images/fishermoyu.jfif\" alt=\"\">",id:15},
 ];
 
+
 // carrito
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
 const guardarCarrito = () => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
 };
 
-// mostrar carrito
 const mostrarCarrito = () =>{
     let contenedor = document.querySelector("#contenedorCarrito");
     contenedor.innerHTML = "";
@@ -106,7 +105,7 @@ function mostrarTotal() {
 
      if (carrito.length > 0) {
         const total = calcularTotalCarrito();
-        totalDiv.innerHTML = `<h3>Total: $${total}</h3>`;
+        totalDiv.innerHTML = `<h3 class ="totalCarrito">Total: $${total}</h3>`;
     } else {
         totalDiv.innerHTML = "";
     }
@@ -158,7 +157,7 @@ terminarCompra()
 
 
 
-// productos en HTML
+// Mostrar productos en HTML
 const productosHTML = (lista = producto) =>{
     let productos = document.querySelector(".divGeneralProductos");
     productos.innerHTML = "";
