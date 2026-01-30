@@ -5,24 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 
 <body>
-    <h1>Tienda de cubos rubik</h1>
+    <header class="header">
+        <h1>Tienda de cubos rubik</h1>
+    </header>
+
+    <h2 class="titulo">Venta de cubos rubik de alta calidad</h2>
+    <p class="parrafo">Encuentra los mejores cubos rubik de las marcas mas reconocidas del mercado. Ofrecemos una amplia variedad de modelos y precios para que puedas elegir el que mejor se adapte a tus necesidades. ¡Compra ahora y mejora tus habilidades de resolución de cubos!</p>
+
     <search id="seccionCarrito">
         <img class="imgCarrito" src="images/carrito.png" alt="">
         <div id="contenedorCarrito">
             <p>Carrito vacio</p>
         </div>
-        <div id="totalPrecio"></div>
+        <div class="accesoriosCarrito">
+            <div id="totalPrecio"></div>
+            <div id="contenedorVaciar"></div>
+            <div id="terminarCompra"></div>
+        </div>
     </search>
     
-
+    <label for="filtroMarca">Ordenar por marca:</label>
+    <select id="filtroMarca">
+        <option value="todos" class="todo">Todos</option>
+        <option value="Gan">Gan</option>
+        <option value="Moyu">Moyu</option>
+        <option value="Dayan">Dayan</option>
+        <option value="Qiyi">Qiyi</option>
+    </select>
+    
+    <label for="filtroPrecio">Ordenar por precio:</label>
+    <select id="filtroPrecio">
+        <option value="predeterminado">Predeterminado</option>
+        <option value="menor">Menor a mayor</option>
+        <option value="mayor">Mayor a menor</option>
+    </select>
 <!-- Hecho con js, productos -->
     <main>
+        
 
-        <div class="divGeneralProductos">
-        </div>
+        <div class="divGeneralProductos"></div>
 
     </main >
 
@@ -45,8 +71,12 @@
     
     
     
-    
-    
+    <!-- librerias -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
+
