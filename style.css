@@ -206,3 +206,44 @@ button:hover{
   border: 1px solid #ccc;
   font-size: 16px;
 }
+
+
+
+
+/* Responsibilidad */
+@media (max-width: 600px){
+  .divGeneralProductos{
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    margin: 20px;
+  }
+  header{
+    padding: 10px;
+    font-size: 10px;
+  }
+  .titulo {
+    font-size: 14px;
+  }
+  .parrafo {
+    font-size: 16px;
+    padding: 15px;
+  }
+  .precioIndividualCarrito{
+    display: none;
+  }
+  .precioTotalCarrito{
+    display: none
+  }
+  #contenedorCarrito{
+    grid-template-columns: auto auto;
+  }
+  .filtrosGeneral{
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .filtroPrecioDiv{
+    display: flex;
+  }
+  .filtroMarcaDiv{
+    display: flex;
+  }
+}
