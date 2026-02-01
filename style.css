@@ -248,7 +248,13 @@ button:hover{
   }
   .productoCarrito{
     font-size: 14px;
-    padding: 0px;
     margin: 0px;
   }
+  .terminarCompraButton{
+    padding: 5px;
+  }
+  .botonVaciarCarrito{
+    padding: 5px;
+  }
+  
 }

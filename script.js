@@ -191,6 +191,7 @@ const productosHTML = (lista = producto) =>{
         btn.addEventListener("click", (e) =>{
             let IdProducto = e.target.dataset.id;
             eliminarDelCarrito(IdProducto);
+            
         });
     });
 };
@@ -211,6 +212,15 @@ function agregarAlCarrito(id) {
             cantidad: 1
         });
     }
+    Toastify({
+            text: "Producto agregado al carrito",
+            duration: 3000,
+            gravity: "bottom",
+            position: "right",
+            style: {
+                background: "linear-gradient(to right, #667eea, #764ba2)",
+            },
+    }).showToast();
     guardarCarrito();
     mostrarCarrito();
     mostrarTotal();
@@ -227,13 +237,23 @@ function eliminarDelCarrito(id) {
         } else {
             carrito = carrito.filter(p => p.id != id);
         }
+        Toastify({
+            text: "Producto eliminado del carrito",
+            duration: 3000,
+            gravity: "bottom",
+            position: "right",
+            style: {
+                background: "linear-gradient(to right, orange, red)",
+            },
+        }).showToast();
     }
 
     guardarCarrito();
     mostrarCarrito();
     mostrarTotal();
     vaciarCarrito();
-    terminarCompra()
+    terminarCompra();
+    
 }
 
 
@@ -291,31 +311,8 @@ configurarFiltros();
 //toastify
 document.querySelectorAll(".botonAgregar").forEach((boton)=>{
     boton.addEventListener("click", ()=>{
-            Toastify({
-            text: "Producto agregado al carrito",
-            duration: 3000,
-            gravity: "bottom",
-            position: "right",
-            style: {
-                background: "linear-gradient(to right, #667eea, #764ba2)",
-            },
-        }).showToast();
+            
     })
 })
 
 
-document.querySelectorAll(".botonEliminar").forEach((boton)=>{
-    
-    boton.addEventListener("click", ()=>{
-        
-            Toastify({
-            text: "Producto eliminado del carrito",
-            duration: 3000,
-            gravity: "bottom",
-            position: "right",
-            style: {
-                background: "linear-gradient(to right, orange, red)",
-            },
-        }).showToast();
-    })
-})
