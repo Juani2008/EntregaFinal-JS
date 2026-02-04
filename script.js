@@ -26,12 +26,13 @@ setTimeout(() => {
                     
                 }
             });
-        }else if (result.isDenied)
+        }else if (result.isDenied){
             swal.fire("Continuaras como invitado", "", "sucecess")
             usuario.push("invitado");
             console.log(JSON.stringify(usuario));
+        }
     })
-},2000)
+},5000)
 
 // productos HTML
 const producto = [
